@@ -26,7 +26,7 @@ const KontakTableRow = ({ kontak }: { kontak: Kontak }) => {
       <TableCell className='flex gap-2'>
         <Dialog>
           <DialogTrigger asChild>
-            <Button type='button' size={'icon'} variant={'success'}>
+            <Button type='button' size={'icon'} variant={'default'}>
               <Pencil className='h-5 w-5' />
             </Button>
           </DialogTrigger>
@@ -70,7 +70,7 @@ const KontakTableRow = ({ kontak }: { kontak: Kontak }) => {
         </Dialog>
         <form action={deleteKontak}>
           <input type='hidden' name='id' value={kontak.id} />
-          <Button type='submit' variant={'success'} size={'icon'}>
+          <Button type='submit' variant={'default'} size={'icon'}>
             <Trash2 />
           </Button>
         </form>

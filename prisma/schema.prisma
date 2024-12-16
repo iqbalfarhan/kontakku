@@ -14,10 +14,29 @@ datasource db {
 }
 
 model Kontak {
-  id        Int     @id @default(autoincrement())
-  name      String
-  phone     String
-  email     String
+  id    Int    @id @default(autoincrement())
+  name  String
+  phone String
+  email String
 
   @@map("kontaks")
+}
+
+model Profile {
+  id       Int     @id @default(autoincrement())
+  alamat   String?
+  kota     String?
+  provinsi String?
+  kodePos  String?
+
+  @@map("profiles")
+}
+
+model Kota {
+  id     Int    @id @default(autoincrement())
+  nama   String
+  negara String
+  benua  String
+
+  @@map("kotas")
 }
